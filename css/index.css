@@ -140,6 +140,13 @@ body {
   font-size: 1.2rem;
 }
 /* END RESET */
+@font-face {
+  font-family: 'Six Caps';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Six Caps'), local('SixCaps'), url(https://fonts.gstatic.com/s/sixcaps/v10/6ae_4KGrU7VR7bNmaYcV_3E.ttf) format('truetype');
+}
 /* VARIABLES */
 /* FUNCTIONS */
 /* STYLES */
@@ -193,9 +200,10 @@ body .top-nav .nav-links {
   align-items: center;
 }
 body .top-nav .nav-links a {
+  font-family: 'Six Caps', sans-serif;
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 body .top-nav .nav-links a:hover {
   color: darkgray;
