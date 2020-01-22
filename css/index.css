@@ -1,1 +1,249 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+  font-size: 1.2rem;
+}
+/* END RESET */
+/* VARIABLES */
+/* FUNCTIONS */
+/* MAIN STYLES */
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+/* HEADER STYLES */
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  background-color: gray;
+}
+.top-nav .nav-links {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.top-nav .nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+.top-nav .nav-links a:hover {
+  color: darkgray;
+}
+.header-text-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-text-img-container .header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+.header-text-img-container .header-text .contact-button {
+  border: 2px solid black;
+  padding: 0.5rem 2%;
+  margin: 0.5rem auto;
+  background-color: darkgray;
+}
+.header-text-img-container .header-text .contact-button:hover {
+  background-color: gray;
+  color: black;
+}
+.header-text-img-container .header-img {
+  max-width: 50%;
+  height: auto;
+}
+/* MAIN CONTENT STYLES */
+.intro-and-skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 10%;
+}
+.intro-and-skills .intro {
+  width: 40%;
+}
+.intro-and-skills .skills {
+  width: 40%;
+}
+.work-history {
+  margin: 10%;
+  padding: 2%;
+  background-color: gray;
+  text-align: center;
+}
+.work-history .wh-table {
+  border: 1px solid black;
+  margin: 5%;
+  margin-bottom: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+}
+.work-history .wh-table div {
+  width: 36%;
+  border: 0.25px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+.work-history .wh-table div p {
+  text-align: left;
+  border: 0.25px solid black;
+  border-right: none;
+  border-left: none;
+}
