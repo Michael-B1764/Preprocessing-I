@@ -168,18 +168,6 @@ body h4 {
 body p {
   font-size: 1rem;
 }
-body header {
-  background-image: url("../img/spruce1.jpg");
-  background-repeat: no-repeat;
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-}
-@media (width: 500px) {
-  body header {
-    height: 80vh;
-  }
-}
 body .top-nav {
   display: flex;
   justify-content: flex-end;
@@ -213,12 +201,19 @@ body .top-nav .nav-links a:hover {
     flex-direction: column;
   }
 }
-body .header-text-img-container {
+body header {
+  background-image: url("../img/spruce1.jpg");
+  background-repeat: no-repeat;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+}
+body header .header-text-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .header-text-img-container .header-text {
+body header .header-text-img-container .header-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,25 +222,30 @@ body .header-text-img-container .header-text {
   text-align: center;
   color: #b45202;
 }
-body .header-text-img-container .header-text .contact-button {
+body header .header-text-img-container .header-text .contact-button {
   border: 2px solid black;
   padding: 0.5rem 2%;
   margin: 0.5rem auto;
   background-color: gray;
   color: black;
 }
-body .header-text-img-container .header-text .contact-button:hover {
+body header .header-text-img-container .header-text .contact-button:hover {
   background-color: #b45202;
   color: black;
 }
 @media (width: 500px) {
-  body .header-text-img-container .header-text {
+  body header .header-text-img-container .header-text {
     width: 90%;
     height: 30vh;
   }
 }
-body .header-text-img-container .header-img {
+body header .header-text-img-container .header-img {
   display: none;
+}
+@media (width: 500px) {
+  body header {
+    height: 80vh;
+  }
 }
 body .intro-and-skills {
   height: 40vh;

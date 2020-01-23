@@ -128,17 +128,9 @@ body {
 		font-size: 1rem;
 	}// p
 
-	header {
-		background-image: url("../img/spruce1.jpg");
-		background-repeat: no-repeat;
-		height:50vh;
-		background-position: center;
-		background-size: cover;
 
-		@media (width:500px){
-			height:80vh;
-		}// media 500px
-	}// header 
+	// NAV STYLES
+
 
 	.top-nav{
 		display:flex;
@@ -165,37 +157,57 @@ body {
 		}// .nav-links
 	}// .top-nav
 
-	.header-text-img-container {
-		display:flex;
-		justify-content: center;
-		align-items: center;
 
-		.header-text {
+	// HEADER STYLES
+
+
+	header {
+		background-image: url("../img/spruce1.jpg");
+		background-repeat: no-repeat;
+		height:50vh;
+		background-position: center;
+		background-size: cover;
+
+		.header-text-img-container {
 			display:flex;
-			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			width:50%;
-			text-align: center;
-			color: @main-color;
-			.contact-button {
-				.button();
-			}//.contact-button
-			
-			@media (width:500px){
-				width:90%;
-				height:30vh;
-			}// media 500px
+	
+			.header-text {
+				display:flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width:50%;
+				text-align: center;
+				color: @main-color;
+				.contact-button {
+					.button();
+				}//.contact-button
+				
+				@media (width:500px){
+					width:90%;
+					height:30vh;
+				}// media 500px
+	
+			}// .header-text
+	
+			.header-img {
+				// max-width:50%;
+				// height: auto;
+				display:none;
+			}// .header-img
+		}// .header-text-img-container
 
-		}// .header-text
+		@media (width:500px){
+			height:80vh;
+		}// media 500px
+	}// header 
 
-		.header-img {
-			// max-width:50%;
-			// height: auto;
-			display:none;
-		}// .header-img
-	}// .header-text-img-container
 
+	// TOP SECTION STYLES
+	
+	
 	.intro-and-skills {
 		height:40vh;
 		background-color: @main-color;
@@ -234,6 +246,8 @@ body {
 		}// .skills
 	}// .intro-and-skills
 
+
+	// WORK HISTORY STYLES
 	.work-history {
 		margin:5%;
 		padding:2%;
@@ -278,6 +292,10 @@ body {
 			}// div
 		}// .wh-table
 	}// .work-history
+
+
+	// BOTTOM SECTION STYLES
+
 
 	.contact {
 		width:100%;
