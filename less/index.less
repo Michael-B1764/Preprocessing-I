@@ -1,3 +1,5 @@
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -50,10 +52,260 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
-
+html {
+	font-size: 62.5%;
+}
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 1.2rem;
 }
 
+
+/* END RESET */
+
+@import url('https://fonts.googleapis.com/css?family=Six+Caps&display=swap');
+
+
+/* VARIABLES */
+
+
+@main-background-color:gray;
+@main-color: rgb(180, 82, 2);
+
+
+
+
+/* FUNCTIONS */
+
+
+.mainLinkStyle() {
+	a {
+		font-family: 'Six Caps', sans-serif;
+		text-decoration: none;
+		color: black;
+		font-size: 1.8rem;
+		&:hover{
+			color:darkgray;
+		}// hover
+	}// a
+}// .mainLinkStyle
+
+.button() {
+	border:2px solid black;
+	padding:0.5rem 2%; 
+	margin:0.5rem auto;
+	background-color: @main-background-color;
+	color:black;
+	&:hover {
+		background-color: @main-color;
+		color: black;
+	}
+}
+
+/* STYLES */
+
+body {
+	
+	background-color: @main-background-color;
+
+
+	h1 {
+		font-size: 2.5rem;
+	}// h1
+	h2 {
+		font-size: 2.2rem;
+	}// h2
+	h3 {
+		font-size: 1.5rem;
+	}// h3
+	h4 {
+		font-size: 1.5rem;
+	}// h4
+	p {
+		font-size: 1rem;
+	}// p
+
+
+	// NAV STYLES
+
+
+	.top-nav{
+		display:flex;
+		justify-content: flex-end;
+		height:50px;
+		background-color: @main-background-color;
+		margin-bottom:10vh;
+		@media (width:500px){
+			height:30vh;
+			justify-content: center;
+		}// media 500px
+
+			.nav-links {
+				width:60%;
+				display:flex;
+				justify-content: space-evenly;
+				align-items: center;
+				.mainLinkStyle();
+
+				@media (max-width: 500px) {
+					flex-direction: column;
+
+				}// media 500px
+		}// .nav-links
+	}// .top-nav
+
+
+	// HEADER STYLES
+
+
+	header {
+		background-image: url("../img/spruce1.jpg");
+		background-repeat: no-repeat;
+		height:50vh;
+		background-position: center;
+		background-size: cover;
+
+		.header-text-img-container {
+			display:flex;
+			justify-content: center;
+			align-items: center;
+	
+			.header-text {
+				display:flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width:50%;
+				text-align: center;
+				color: @main-color;
+				.contact-button {
+					.button();
+				}//.contact-button
+				
+				@media (width:500px){
+					width:90%;
+					height:30vh;
+				}// media 500px
+	
+			}// .header-text
+	
+			.header-img {
+				// max-width:50%;
+				// height: auto;
+				display:none;
+			}// .header-img
+		}// .header-text-img-container
+
+		@media (width:500px){
+			height:80vh;
+		}// media 500px
+	}// header 
+
+
+	// TOP SECTION STYLES
+	
+	
+	.intro-and-skills {
+		height:40vh;
+		background-color: @main-color;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		padding:5%;
+
+		@media (max-width:500px){
+			height:60vh;
+			flex-direction: column;
+			justify-content: space-evenly;
+			h2 {
+				text-align: center;
+				margin:5% auto;
+				font-size: 1.5rem;
+			}// h2
+			p {
+				font-size: 0.8rem;
+			}// p
+		}// media 500px;
+		
+		.intro {
+			width:40%;
+			@media (width:500px) {
+				width: 80%;
+			}
+		}// .intro
+
+		.skills {
+			width:40%;
+			@media (width:500px) {
+				width: 80%;
+				text-align: center;
+			}
+		}// .skills
+	}// .intro-and-skills
+
+
+	// WORK HISTORY STYLES
+	.work-history {
+		margin:5%;
+		padding:2%;
+		background-color: @main-background-color;
+		text-align: center;
+
+		@media (width:500px) {
+			margin:0;
+		}// media 500px
+
+		.wh-table {
+			border: 1px solid black;
+			margin: 5%;
+			margin-bottom: 5%;;
+			width:90%;
+			display:flex;
+			justify-content:space-between;
+			align-items: center;
+			background-color: lightgray;
+			
+			@media (width:500px) {
+				margin:0;
+				width:100%;
+			}// media 500px
+
+			div {
+				width:36%;
+				border:0.25px solid black;
+				border-top: none;
+				border-bottom:none;
+
+				p {
+					text-align: left;
+					border: 0.25px solid black;
+					border-right: none;
+					border-left:none;
+
+					@media (width:500px) {
+						// text-align: center;
+					}// media 500px
+				}// p
+			}// div
+		}// .wh-table
+	}// .work-history
+
+
+	// BOTTOM SECTION STYLES
+
+
+	.contact {
+		width:100%;
+		padding:5%;
+		background-color: @main-color;
+	}// .contact
+
+	.copyright {
+		text-align: center;
+		padding:2%;
+		background-color: @main-background-color;
+	}// .copyright
+}// body
